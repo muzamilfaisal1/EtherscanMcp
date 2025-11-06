@@ -1,0 +1,30 @@
+{
+  "name": "etherscan-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for Etherscan API integration. Requires ETHERSCAN_API_KEY environment variable.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "etherscan",
+    "ethereum",
+    "blockchain"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  }
+}
+

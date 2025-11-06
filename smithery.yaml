@@ -1,0 +1,35 @@
+name: etherscan-mcp
+version: 1.0.0
+description: Model Context Protocol server for Etherscan API integration with multichain support
+
+# Build configuration
+build:
+  command: npm install && npm run build
+  output: dist
+
+# Runtime configuration
+runtime:
+  command: node
+  args:
+    - dist/index.js
+
+# Environment variables required from users
+env:
+  - name: ETHERSCAN_API_KEY
+    description: Your Etherscan API key (get one at https://etherscan.io/apis)
+    required: true
+    secret: true
+
+# Metadata
+metadata:
+  author: ""
+  license: MIT
+  repository: ""
+  keywords:
+    - mcp
+    - model-context-protocol
+    - etherscan
+    - ethereum
+    - blockchain
+    - multichain
+
