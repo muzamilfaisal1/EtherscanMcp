@@ -8,17 +8,21 @@ build:
   output: dist
 
 # Runtime configuration
-runtime:
-  command: node
-  args:
-    - dist/index.js
+runtime: typescript
+
+# Start command
+startCommand:
+  type: stdio
+  commandFunction: |-
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: config.env
+    })
 
 # Environment variables required from users
 env:
-  - name: ETHERSCAN_API_KEY
-    description: Your Etherscan API key (get one at https://etherscan.io/apis)
-    required: true
-    secret: true
+  ETHERSCAN_API_KEY: ""
 
 # Metadata
 metadata:
